@@ -15,10 +15,13 @@
 import  dotenv from 'dotenv'
 import products from './data/products.js'
 import express from 'express'
+import colors from 'colors'
+import connectDB  from './confignp,/db.js'
 //const port = 5001
 
 dotenv.config()
 
+connectDB()
 // respond with "hello world" when a GET request is made to the homepage
 app.get('/',  (req, res) =>  {
   res.send('Api is jas')
