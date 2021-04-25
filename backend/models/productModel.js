@@ -1,6 +1,6 @@
-import mangoose from 'mongoose'
+import mongoose from 'mongoose'
 
-const reviewSchema =mongoose.Schema({
+const reviewSchema = mongoose.Schema({
     name:{type:String, required:true},
     rating:{type:Number, required:true},
     comment:{type:String, required:true},
@@ -8,9 +8,9 @@ const reviewSchema =mongoose.Schema({
     timestamps:true
 })
 
-const productSchema = mangoose.Schema({
+const productSchema = mongoose.Schema({
     user:{
-        type: mongose.Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         require:true,
         ref:'User'
     },
@@ -21,11 +21,11 @@ const productSchema = mangoose.Schema({
     brand:{
         type:String,
         required: true,
-        unique: true
+        unique: false
     },
     catergory:{
         type:String,
-        required: true,
+        required:false,
     
     },
     description:{
@@ -69,6 +69,6 @@ const productSchema = mangoose.Schema({
 
 })
 
-const Product=mongose.model('Product',productSchema)
+const Product=mongoose.model('Product',productSchema)
 
 export default Product
