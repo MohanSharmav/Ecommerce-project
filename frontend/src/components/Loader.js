@@ -5,7 +5,7 @@ const Loader =() =>{
     return (
         <spinner animation= 'border' role='status' style={{width:'100px',height:'100xpx',margin:'auto',display:'block'}}>
 
-            <span class='sr-only'>Loading ...</span>
+            <span className='sr-only'>Loading ...</span>
             
         </spinner>
     )
