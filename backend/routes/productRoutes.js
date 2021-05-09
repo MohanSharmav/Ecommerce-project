@@ -114,7 +114,7 @@ const router = express.Router();
 import { getProducts, getProductsById } from '../controllers/productController.js'
 
 
-router.router('/').get(getProducts);
+router.route('/').get(getProducts);
 
-router.router('/:id').get(getProductsById);
+router.route('/:id').get(getProductsById);
 export default router;
